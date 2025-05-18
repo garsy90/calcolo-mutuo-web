@@ -1,0 +1,46 @@
+/* sfondo verde chiaro con alpha 0.6 */
+body {
+  background-color: rgba(144, 238, 144, 0.6) !important;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* banner verticali ai lati, sotto il contenuto */
+#banner-left,
+#banner-right {
+  position: fixed !important;
+  top: 180px !important;      /* regola per allineare */
+  width: 120px !important;
+  z-index: 0 !important;      /* <=== ora sotto */
+}
+#banner-left { left: 0 !important; }
+#banner-right { right: 0 !important; }
+
+/* container interno in primo piano */
+.container {
+  position: relative;         /* necessaria per z-index */
+  z-index: 1;                 /* <=== sopra i banner */
+  margin-left: 140px !important;
+  margin-right: 140px !important;
+}
+
+/* carte leggermente trasparenti */
+.card {
+  background: #ffffffcc;
+  border: 1px solid #ccc;
+  position: relative;
+  z-index: 2;                 /* assicura che le card stiano sopra */
+}
+
+/* contenitore tabella: sfondo bianco, larghezza ridotta del 40%, centrato, scrollbar */
+#table-container {
+  background: white;
+  max-width: 60%;       /* 100% − 40% = 60% */
+  margin: 0 auto 2rem;  /* centrato e spazio sotto */
+  padding: 0.5rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-height: 500px;
+  overflow-y: auto;
+  position: relative;
+  z-index: 2;
+}

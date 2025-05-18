@@ -1,0 +1,28 @@
+per trovare il percorso dove aprire l'ambiente virtuale 
+
+cd "C:\Users\garsy\OneDrive\Desktop\calcolo mutuo"
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+per la creazione dell'ambiente virtuale 
+
+python -m venv venv
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+attivazione ambiente virtuale
+ 
+.\venv\Scripts\Activate.ps1
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+per la concessione del permesso del sistema se viene negato 
+
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+se l'ambiente virtuale viene eseguito con successo appare
+
+(venv) PS C:\Users\garsy\OneDrive\Desktop\calcolo mutuo>
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+per attivare la porta di accesso e poter utilizzare il sito sul browser
+
+python app.py
