@@ -5,12 +5,15 @@ from reportlab.lib.pagesizes import A4
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer
 from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet
-from flask import send_file
+from flask import send_from_directory
+import os
 
 @app.route("/ads.txt")
 def ads_txt():
-    # restituisce il file ads.txt in modalità text/plain
-    return send_file("ads.txt", mimetype="text/plain")
+    # serve static/ads.txt dalla cartella statica
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'ads.txt',
+                               mimetype='text/plain')
 
 app = Flask(__name__)
 
